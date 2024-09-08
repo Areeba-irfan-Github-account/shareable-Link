@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Page</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="userForm">
+            <h1 id="head">Dynamic and Added Page By Areeba Irfan</h1>
+            <div>
+                <h2>Personal Information</h2>
+                <input id="name" placeholder="Name" required>
+                <br>
+                <input id="email" placeholder="Email" type="email" required>
+                <br>
+                <input id="phone" placeholder="Phone" type="tel" required>
+            </div>
+            <div>
+                <label for="education">Education:</label>
+                <br>
+                <input id="education" placeholder="Education">
+            </div>
+            <div>
+                <label for="skills">Skills:</label>
+                <br>
+                <input id="skills" placeholder="Skills">
+            </div>
+            <button type="submit">Click here to make your resume</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Your Resume</h2>
+            <div id="resume-content">
+                <p id="displayName"></p>
+                <p id="displayEmail"></p>
+                <p id="displayPhone"></p>
+                <p id="displayEducation"></p>
+                <p id="displaySkills"></p>
+            </div>
+        </div>
+        <div id="share-section">
+            <button id="copy-link">Copy Share Link</button>
+            <br>
+            <a href="#" id="share-link" style="display: none;" target="_blank">View Share Resume</a>
+            <br>
+            <button id="download-btn">Download PDF</button>
+        </div>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
